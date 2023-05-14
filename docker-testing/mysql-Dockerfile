@@ -1,0 +1,5 @@
+FROM mysql:latest
+ENV MYSQL_DATABASE=carpet_db
+COPY ./dump.sql /docker-entrypoint-initdb.d
+VOLUME ./DATA
+EXPOSE 3306
